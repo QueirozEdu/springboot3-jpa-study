@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.eduardo.study.StudyApplication;
+//import com.eduardo.study.StudyApplication;
 import com.eduardo.study.entities.User;
 import com.eduardo.study.services.UserService;
 
@@ -26,14 +26,14 @@ import jakarta.transaction.Transactional;
 @Transactional // It's necessary to not get a proxy error
 public class UserResource {
 
-	private final StudyApplication studyApplication;
+	// private final StudyApplication studyApplication;
 
 	@Autowired
 	private UserService service;
 
-	UserResource(StudyApplication studyApplication) {
-		this.studyApplication = studyApplication;
-	}
+//	UserResource(StudyApplication studyApplication) {
+//		this.studyApplication = studyApplication;
+//	}
 
 	@GetMapping
 	public ResponseEntity<List<User>> findAll() {
